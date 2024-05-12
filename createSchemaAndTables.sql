@@ -1,9 +1,49 @@
 CREATE SCHEMA faculdade
 
+CREATE TABLE faculdade. aluno(
+	Id_Aluno SERIAL PRIMARY KEY,
+	FOREIGN KEY (Id_Historico_Escolar) REFERENCES faculdade.historico_aluno,
+	FOREIGN KEY(Id_Curso) REFERENCES faculdade.curso,
+	Nome VARCHAR(30),
+	Sobrenome VARCHAR(60),
+	Data_Adesao DATE,
+	CPF VARCHAR(12),
+);
+
+CREATE TABLE faculdade. curso(
+	Id_Curso SERIAL PRIMARY KEY,
+	FOREIGN KEY(Id_Professor) REFERENCES faculdade.professor,
+	Titulo VARCHAR(30),
+);
+
+CREATE TABLE faculdade.historico_aluno(
+	Id_Historico_Escolar SERIAL PRIMARY KEY,
+	FOREIGN KEY(Id_Aluno) REFERENCES faculdade.aluno,
+	FOREIGN KEY(Id_Disciplina) REFERENCES faculdade.disciplina,
+	Media FLOAT(2),
+	Semestre VARCHAR(30),
+	Ano INT,
+);
+
+CREATE TABLE faculdade.grupo_aluno(
+	Id_Grupo_Aluno SERIAL PRIMARY KEY,
+	FOREIGN KEY (Id_Historico_TCC) REFERENCES faculdade.historico_tcc,
+	FOREIGN KEY(Id_Aluno) REFERENCES faculdade.aluno,
+);
+
+CREATE TABLE faculdade.historico_tcc(
+	Id_Historico_TCC SERIAL PRIMARY KEY,
+	FOREIGN KEY(Id_Grupo_Aluno) REFERENCES faculdade.grupo_aluno,
+	FOREIGN KEY(Id_Professor) REFERENCES faculdade.professor,
+	Semestre VARCHAR(30),
+	Ano INT,
+	Nota FLOAT(2),
+);
+
 CREATE TABLE faculdade.professor (
     Id_Professor SERIAL PRIMARY KEY,
     Nome VARCHAR(30),
-	Sobrenome VARCHAR(100),
+	Sobrenome VARCHAR(60),
 	Formacao VARCHAR(30),
 	CPF VARCHAR(11)
 );
@@ -27,7 +67,7 @@ CREATE TABLE faculdade.historico_professor(
 	Id_Professor INT,
 	Id_Disciplina INT,
 	Semestre VARCHAR(30),
-	Ano VARCHAR(30),
+	Ano INT,
 	FOREIGN KEY (Id_Professor) REFERENCES faculdade.professor(Id_Professor),
 	FOREIGN KEY (Id_Disciplina) REFERENCES faculdade.disciplina(Id_Disciplina)
 	
