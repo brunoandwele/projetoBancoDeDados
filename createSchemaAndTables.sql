@@ -10,7 +10,9 @@ CREATE TABLE faculdade.professor(
 
 CREATE TABLE faculdade.curso(
 	Id_Curso SERIAL PRIMARY KEY,
+	Id_departamento INT,
 	Id_Professor INT,
+	FOREIGN KEY(Id_departamento) REFERENCES faculdade.departamento(Id_departamento),
 	FOREIGN KEY(Id_Professor) REFERENCES faculdade.professor(Id_Professor),
 	Titulo VARCHAR(30)
 );
