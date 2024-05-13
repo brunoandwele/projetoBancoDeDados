@@ -45,6 +45,7 @@ CREATE TABLE faculdade.historico_aluno(
 
 CREATE TABLE faculdade.grupo_aluno(
 	Id_Grupo_Aluno SERIAL PRIMARY KEY,
+	Id_Grupo INT,
 	Id_Aluno INT,
 	FOREIGN KEY(Id_Aluno) REFERENCES faculdade.aluno(Id_Aluno)
 );
