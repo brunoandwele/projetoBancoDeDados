@@ -29,9 +29,8 @@ Este modelo de banco de dados oferece uma estrutura robusta para a gestão acad�
 4. Consulte a documentação para obter detalhes sobre a estrutura do banco de dados e a sintaxe das consultas.
 
 ## Autores
-| <img src="https://avatars.githubusercontent.com/u/84588132?v=4" alt="Ana Beatriz Tavares" width="150"/>  | <img src="https://avatars.githubusercontent.com/u/103201200?v=4" alt="Bruno Andwele" width="150"/> |
-
+<img src="https://avatars.githubusercontent.com/u/84588132?v=4" alt="Ana Beatriz Tavares" width="150"/> | <img src="https://avatars.githubusercontent.com/u/103201200?v=4" alt="Bruno Andwele" width="150"/> |
 | ------------- | ------------- |
-|**Ana Beatriz Tavares** | **Bruno Andwele** |
-| *24.122.019-3* | *24.122.030-0*
+**Ana Beatriz Tavares** | **Bruno Andwele** |
+*24.122.019-3* | *24.122.030-0*
 
