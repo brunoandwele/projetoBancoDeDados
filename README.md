@@ -28,6 +28,10 @@ Este modelo de banco de dados oferece uma estrutura robusta para a gestão acad�
 3. Execute o arquivo "generateData.sql" responsável por incluir dados no banco de dados;
 4. Utilize as consultas SQL fornecidas no arquivo "querys.sql"  para gerar os relatórios desejados.
 
+## Diagrama Relacional
+
+![image](https://github.com/brunoandwele/projetoBancoDeDados/assets/103201200/43142e6e-3bbb-478f-8f12-dd9cbdd8f641)
+
 
 ## Autores
 <img src="https://avatars.githubusercontent.com/u/84588132?v=4" alt="Ana Beatriz Tavares" width="150"/> | <img src="https://avatars.githubusercontent.com/u/103201200?v=4" alt="Bruno Andwele" width="150"/> |
