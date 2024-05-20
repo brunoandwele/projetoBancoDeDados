@@ -16,12 +16,17 @@
 -- -- 3)listar alunos que já se formaram (foram aprovados em todos os cursos de uma matriz curricular) 
 -- --   em um determinado semestre de um ano
 
+-- O nosso porjeto adotou um estilo em que o aluno precisa passar nas disciplinas de um semestre para
+-- poder avancar para o proximo semestre. Alem disso, a nossa faculdade possui apenas dois semestres,
+-- por tanto, o semestre final acabou sendo o segundo, por tanto, para o aluno se formar, ele precisa
+-- ter media maior do que 5 no segundo semestre.
+
 -- SELECT DISTINCT aluno.nome, curso.titulo, hist.media, hist.semestre, hist.ano
 -- FROM faculdade.aluno as aluno
 -- INNER JOIN faculdade.historico_aluno as hist ON aluno.id_aluno = hist.id_aluno
 -- RIGHT JOIN faculdade.matriz_curricular as mc ON mc.id_curso = aluno.id_curso
 -- INNER JOIN faculdade.curso as curso ON aluno.id_curso = curso.id_curso
--- WHERE hist.semestre = 'Segundo' and hist.ano = '2006' and hist.media >= 5
+-- WHERE hist.semestre = 'Segundo' and hist.media >= 5
 -- ORDER BY aluno.nome
 
 
