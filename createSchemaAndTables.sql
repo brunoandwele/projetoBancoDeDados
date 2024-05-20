@@ -8,6 +8,14 @@ CREATE TABLE faculdade.professor(
 	CPF VARCHAR(11)
 );
 
+CREATE TABLE faculdade.departamento(
+	Id_Departamento SERIAL PRIMARY KEY,
+	Titulo varchar(30),
+	Verba NUMERIC(12, 2),
+	Id_Professor INT,
+	FOREIGN KEY (Id_Professor) REFERENCES faculdade.professor(Id_Professor)
+);
+
 CREATE TABLE faculdade.curso(
 	Id_Curso SERIAL PRIMARY KEY,
 	Id_Departamento INT,
@@ -62,15 +70,6 @@ CREATE TABLE faculdade.historico_tcc(
 	Semestre VARCHAR(30),
 	Ano INT,
 	Nota FLOAT(2)
-);
-
-
-CREATE TABLE faculdade.departamento(
-	Id_Departamento SERIAL PRIMARY KEY,
-	Titulo varchar(30),
-	Verba NUMERIC(12, 2),
-	Id_Professor INT,
-	FOREIGN KEY (Id_Professor) REFERENCES faculdade.professor(Id_Professor)
 );
 
 CREATE TABLE faculdade.historico_professor(
