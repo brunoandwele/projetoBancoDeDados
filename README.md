@@ -23,10 +23,11 @@ Este modelo de banco de dados oferece uma estrutura robusta para a gestão acad�
 
 ## Instruções de Uso
 
-1. Clone este repositório em seu ambiente local.
-2. Importe o script SQL para criar o banco de dados e suas tabelas.
-3. Utilize as consultas SQL fornecidas para gerar os relatórios desejados.
-4. Consulte a documentação para obter detalhes sobre a estrutura do banco de dados e a sintaxe das consultas.
+1. Abra a ferrementa PostgreSQL;
+2. Execute o arquivo "createSchemaAndTables.sql" responsável por criar as tabelas do banco de dados;
+3. Execute o arquivo "generateData.sql" responsável por incluir dados no banco de dados;
+4. Utilize as consultas SQL fornecidas no arquivo "querys.sql"  para gerar os relatórios desejados.
+
 
 ## Autores
 <img src="https://avatars.githubusercontent.com/u/84588132?v=4" alt="Ana Beatriz Tavares" width="150"/> | <img src="https://avatars.githubusercontent.com/u/103201200?v=4" alt="Bruno Andwele" width="150"/> |
